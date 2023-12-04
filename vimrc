@@ -8,4 +8,5 @@ set splitbelow
 set splitright
 set incsearch
 set hlsearch
+set tags=./tags,tags;
 colorscheme slate
