@@ -1,0 +1,11 @@
+syntax on
+set number
+set relativenumber!
+set autoindent
+set cursorline
+set smartindent
+set splitbelow
+set splitright
+set incsearch
+set hlsearch
+colorscheme slate
