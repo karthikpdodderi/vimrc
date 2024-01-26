@@ -15,3 +15,4 @@ set incsearch "can use 'n' to go to all the words once searched. Can search usin
 set hlsearch "highlights all the words searched. Can clear highlight by using :noh
 set tags=./tags,tags; "creats tags to go to function defination, go inside function. Can create tags using ctags . command
 colorscheme slate "using slate colorscheme
+set clipboard=unnamed "copies data to main keyboatd (used for mac) (for linux use set clipboard=unnamedplus)
