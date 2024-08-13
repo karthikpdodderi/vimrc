@@ -1,18 +1,54 @@
-syntax on "highlights the text of programming languages
-set number "displays the actual line number on the left side of the screen
-set relativenumber! "displays the relative number of the each line from the current line. Have added ! to toggle if off when necessary. Can toggle off using :relativenumber!
-set autoindent "automatically indents new lines based on the indentation of the previous line
-set cursorline "highlights the current line
-set smartindent "more advanced feature that not only considers the indentation of the previous line but also takes into account the syntax of the programming language being used
-set smarttab "setting that combines the functionality of both 'autoindent' and 'smart indent'. When 'smart tab' is enabled, pressing the Tab key not only indents the line but also adjusts the indentation level based on the language-specific rules
-set tabstop=4 "how many columns of whitespace is a \t char worth?
-set softtabstop=4 "how many columns of whitespace is a tab keypress or a backspace keypress worth?
-set shiftwidth=4 "how many columns of whitespace a “level of indentation” is worth?
-set noexpandtab "making sure that tab is no spaces (i.e a tab does not get converted to x amount of spaces)
-set splitbelow "a new terminal/window when split horizontally appears below. :sp for horizontal split.
-set splitright "a new terminal/window when split vertically appears right. :vsp for vertical split.
-set incsearch "can use 'n' to go to all the words once searched. Can search using '/'
-set hlsearch "highlights all the words searched. Can clear highlight by using :noh
-set tags=./tags,tags; "creats tags to go to function defination, go inside function. Can create tags using ctags . command
-colorscheme slate "using slate colorscheme
+" Syntax highlighting for programming languages
+syntax on
+
+" Display line numbers
+set number
+
+" Toggle relative line numbers
+set relativenumber!
+
+" Auto-indent new lines
+set autoindent
+set smartindent
+
+" Advanced auto-indentation based on file type
+filetype indent on
+
+" Adjust indentation settings
+set tabstop=4            " Number of spaces a tab represents
+set softtabstop=4        " Number of spaces a tab press counts for
+set shiftwidth=4        " Number of spaces for each indentation level
+set expandtab            " Convert tabs to spaces
+
+" Highlight the current line
+set cursorline
+
+" Smart tab handling
+set smarttab
+
+" Split behavior
+set splitbelow
+set splitright
+
+" Search settings
+" highlights all the words searched. Can clear highlight by using :noh
+set incsearch  
+set hlsearch
+
+" Tags settings for navigation
+set tags=./tags,tags;
+
+" Color scheme
+colorscheme slate
+
+" Clipboard support for Linux
+" Uncomment the following line if clipboard access is needed
+" set clipboard=unnamedplus
+
+" Additional settings for better indentation
+set smartindent          " Use smart indentation based on syntax
+set cindent              " Enable C-style indentation
+set indentexpr=GetCIndent() " Set expression to use for indentation (if using C-like languages)
+set shiftround           " Round indent to nearest multiple of 'shiftwidth'
+
 "set clipboard=unnamed "copies data to main keyboatd (used for mac) (for linux install vim-gtk3 using command 'sudo apt-get install vim-gtk3' refer : https://vim.fandom.com/wiki/Accessing_the_system_clipboard)
